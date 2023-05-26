@@ -1,0 +1,125 @@
+// # Variables
+// -----------------------------------------------------------------------------
+
+$color-border:    #ddd;
+$color-open-icon: black;
+
+
+
+// # Accordion Default Styles
+// -----------------------------------------------------------------------------
+
+// Force all content open if there is no JS.
+.c-accordion__item.no-js {
+	.c-accordion__content {
+		display: block !important;
+	}
+
+	.c-accordion__title {
+		padding-right: none;
+		cursor: default;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.js-accordion-controller {
+	//background-color: var(--wp--preset--color--yellow-30);
+	border-radius:.5rem;
+	position: relative;
+	cursor: pointer;
+	padding: 1rem 3rem 1rem 0;
+	display: flex;
+	flex-direction: column;
+	margin-block-end: 0;
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		content: "+";
+		font-size: 2.5rem;
+		color: $color-open-icon;
+		font-weight: 300;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		padding-bottom: 10px;
+	}
+	.is-open & {
+		//background-color: var(--wp--preset--color--yellow-60);
+		&:after {
+			content: "\2212";
+		}
+	}
+	&:hover {
+		filter: brightness(.95);
+	}
+}
+
+.c-accordion {
+	&__title {
+		margin-block-start: 0;
+		margin-block-end: 0;
+		font-weight: var(--wp--custom--typography--font-weight--bold);
+		line-height: var(--wp--custom--typography--line-height--small);
+		font-size: var(--wp--preset--font-size--medium);
+	}
+	&__subtitle {
+		font-size: var(--wp--preset--font-size--normal);
+		line-height: var(--wp--custom--typography--line-height--small);
+		margin: .5rem 0;
+		&:empty {
+			display: none;
+		}
+	}
+	&__duration {
+		font-size: var(--wp--preset--font-size--small);
+		font-weight: var(--wp--custom--typography--font-weight--medium);
+		display: flex;
+		&:before {
+			content: '';
+			background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjUuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0yNTYsMEMxMTQuOCwwLDAsMTE0LjgsMCwyNTZzMTE0LjgsMjU2LDI1NiwyNTZzMjU2LTExNC44LDI1Ni0yNTZTMzk3LjIsMCwyNTYsMHogTTI1Niw0NzUuNAoJYy0xMjEuMSwwLTIxOS40LTk4LjQtMjE5LjQtMjE5LjRTMTM0LjksMzYuNiwyNTYsMzYuNlM0NzUuNCwxMzQuOSw0NzUuNCwyNTZTMzc3LjEsNDc1LjQsMjU2LDQ3NS40eiBNMzY1LjcsMjU2CgljMCwxMC4xLTguMiwxOC4zLTE4LjMsMTguM0gyNTZjLTEwLjEsMC0xOC4zLTguMi0xOC4zLTE4LjNWOTEuNGMwLTEwLjEsOC4yLTE4LjMsMTguMy0xOC4zYzEwLjEsMCwxOC4zLDguMiwxOC4zLDE4LjN2MTQ2LjNoNzMuMQoJQzM1Ny41LDIzNy43LDM2NS43LDI0NS45LDM2NS43LDI1NnoiLz4KPC9zdmc+Cg==");
+			background-repeat: no-repeat;
+			width: 16px;
+			display: block;
+			margin-right: 0.3rem;
+			background-position: center;
+		}
+	}
+	&__content {
+		margin-block-start: 0;
+		:last-child {
+			margin-block-end: 0;
+		}
+		.wp-block-embed.is-type-video {
+			margin-top: 1em;
+			//border-radius: calc(var(--wp--custom--border-radius--button) / 2);
+			iframe {
+				//border-radius: calc(var(--wp--custom--border-radius--button) / 2);
+			}
+		}
+	}
+}
+
+[data-initially-open="false"] {
+	.c-accordion__content {
+		display: none;
+	}
+}
+
+// Make all the content visible when printing the page.
+@media print {
+	.c-accordion__content {
+		display: block !important;
+	}
+}
+
+.wp-block-ballschule-accordion-item {
+	&.is-style-faq {
+		.c-accordion__subtitle,
+		.c-accordion__duration {
+			display: none !important;
+		}
+	}
+}

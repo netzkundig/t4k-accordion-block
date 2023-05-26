@@ -1,0 +1,32 @@
+.editor-styles-wrapper {
+	.wp-block-ballschule-accordion-item {
+		border: 1px solid lightgray;
+		padding: .5rem;
+		&.is-style-faq {
+			.c-accordion__subtitle,
+			.c-accordion__duration {
+				display: none !important;
+			}
+		}
+	}
+	.js-accordion-controller:hover {
+		cursor: auto;
+	}
+	.c-accordion__item {
+		&.is-selected {
+			border-bottom: 1px solid var(--wp-admin-theme-color) !important;
+		}
+	}
+	.c-accordion__title {
+		line-height: var(--wp--custom--typography--line-height--small);
+		font-size: var(--wp--preset--font-size--medium);
+	}
+	.c-accordion__duration {
+		display: inline;
+		&:before {
+			display: inline-block;
+			height: 16px;
+			vertical-align: text-top;
+		}
+	}
+}

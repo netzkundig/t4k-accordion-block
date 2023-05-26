@@ -1,0 +1,65 @@
+{
+	"apiVersion": "2",
+	"name": "ballschule/accordion-item",
+	"title": "Ballschule Accordion Item",
+	"category": "t4k-content-blocks",
+	"textdomain": "accordion-blocks",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": ".c-accordion__title"
+		},
+		"subtitle": {
+			"type": "string",
+			"source": "html",
+			"selector": ".c-accordion__subtitle"
+		},
+		"duration": {
+			"type": "string",
+			"source": "html",
+			"selector": ".c-accordion__duration"
+		},
+		"initiallyOpen": {
+			"type": "boolean",
+			"default": false
+		},
+		"clickToClose": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoClose": {
+			"type": "boolean",
+			"default": true
+		},
+		"titleTag": {
+			"type": "string",
+			"default": "h3"
+		},
+		"scroll": {
+			"type": "boolean",
+			"default": false
+		},
+		"scrollOffset": {
+			"type": "number",
+			"default": 0
+		},
+		"uuid": {
+			"type": "number"
+		},
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"align": true
+	},
+	"styles": [
+		{ "name": "default", "label": "Standard", "isDefault": true },
+		{ "name": "faq", "label": "FAQ" }
+	],
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css"
+}
