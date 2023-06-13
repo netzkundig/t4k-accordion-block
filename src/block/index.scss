@@ -30,7 +30,7 @@ $color-open-icon: black;
 	border-radius:.5rem;
 	position: relative;
 	cursor: pointer;
-	padding: 1rem 3rem 1rem 0;
+	padding: 0 3rem 0 0;
 	display: flex;
 	flex-direction: column;
 	margin-block-end: 0;
@@ -44,7 +44,6 @@ $color-open-icon: black;
 		font-weight: 300;
 		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
-		padding-bottom: 10px;
 	}
 	.is-open & {
 		//background-color: var(--wp--preset--color--yellow-60);
@@ -61,7 +60,7 @@ $color-open-icon: black;
 	&__title {
 		margin-block-start: 0;
 		margin-block-end: 0;
-		font-weight: var(--wp--custom--typography--font-weight--bold);
+		font-weight: var(--wp--custom--typography--font-weight--semi-bold);
 		line-height: var(--wp--custom--typography--line-height--small);
 		font-size: var(--wp--preset--font-size--medium);
 	}
@@ -88,7 +87,10 @@ $color-open-icon: black;
 		}
 	}
 	&__content {
-		margin-block-start: 0;
+		margin-block-start: 1rem;
+		> *:first-child {
+			margin-block-start: 0;
+		}
 		:last-child {
 			margin-block-end: 0;
 		}
