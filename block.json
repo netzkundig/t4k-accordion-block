@@ -1,7 +1,7 @@
 {
 	"apiVersion": "2",
 	"name": "ballschule/accordion-item",
-	"title": "Ballschule Accordion Item",
+	"title": "t4k Accordion Item",
 	"category": "t4k-content-blocks",
 	"textdomain": "accordion-blocks",
 	"attributes": {
