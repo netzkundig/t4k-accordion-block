@@ -3,6 +3,7 @@
 
 $color-border:    #ddd;
 $color-open-icon: black;
+$color-tab-background: transparentize(#fff, 0.4);
 
 
 
@@ -26,7 +27,6 @@ $color-open-icon: black;
 }
 
 .js-accordion-controller {
-	//background-color: var(--wp--preset--color--yellow-30);
 	border-radius:.5rem;
 	position: relative;
 	cursor: pointer;
@@ -37,13 +37,19 @@ $color-open-icon: black;
 	&:after {
 		position: absolute;
 		top: 50%;
-		right: 1rem;
+		right: 0;
 		content: "+";
 		font-size: 2.5rem;
+		height: 2rem;
+		width: 2rem;
+		border-radius: 1rem;
+		line-height: 2rem;
+		text-align: center;
 		color: $color-open-icon;
 		font-weight: 300;
 		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
+		background-color: $color-tab-background;
 	}
 	.is-open & {
 		//background-color: var(--wp--preset--color--yellow-60);
@@ -59,7 +65,7 @@ $color-open-icon: black;
 .c-accordion {
 	&__title {
 		margin-block-start: 0;
-		margin-block-end: 0;
+		margin-block-end: 0 !important;
 		font-weight: var(--wp--custom--typography--font-weight--bold);
 		line-height: var(--wp--custom--typography--line-height--small);
 		font-size: clamp(1rem, 2.5vw, 1.1rem);
@@ -87,6 +93,11 @@ $color-open-icon: black;
 		}
 	}
 	&__content {
+		background-color: $color-tab-background;
+		margin-left: -.75rem;
+		margin-right: -.75rem;
+		padding: .75rem;
+		border-radius: .5rem;
 		margin-block-start: 1rem;
 		> *:first-child {
 			margin-block-start: 0;

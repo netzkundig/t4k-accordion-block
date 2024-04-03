@@ -313,6 +313,7 @@ const AccordionItemEdit = ({
 						tagName={ titleTag === 'button' ? 'div' : titleTag }
 						allowedFormats={ [
 							'core/italic',
+							'core/text-color',
 						] }
 						placeholder={ __('Titel des Abschnitts …', 'accordion-blocks') }
 						value={ title }
