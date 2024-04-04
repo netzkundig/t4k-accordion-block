@@ -65,7 +65,7 @@ $color-tab-background: transparentize(#fff, 0.4);
 .c-accordion {
 	&__title {
 		margin-block-start: 0;
-		margin-block-end: 0 !important;
+		margin-block-end: .5rem !important;
 		font-weight: var(--wp--custom--typography--font-weight--bold);
 		line-height: var(--wp--custom--typography--line-height--small);
 		font-size: clamp(1rem, 2.5vw, 1.1rem);
@@ -73,7 +73,7 @@ $color-tab-background: transparentize(#fff, 0.4);
 	&__subtitle {
 		font-size: var(--wp--preset--font-size--normal);
 		line-height: var(--wp--custom--typography--line-height--small);
-		margin: .5rem 0;
+		margin-block-end: .5rem;
 		&:empty {
 			display: none;
 		}
